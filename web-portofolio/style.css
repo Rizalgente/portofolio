@@ -1,0 +1,521 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(19, 18, 18);
+}
+header{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+nav{
+    /* top: 0;
+    position: fixed; */
+    width: 100%;
+    padding: 10px 50px 40px;
+}
+/* nav.sticky{
+    border-bottom: 1px solid rgb(92, 92, 92);
+    transition: 0.6s;
+    background: black;
+    padding: 10px 50px 10px;
+    opacity: 0.9;
+} */
+nav h1 a{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    float: left;
+}
+nav ul{
+    position: relative;
+    float: right;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 10px 0 10px;
+}
+nav ul li i{
+    visibility: hidden;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    margin: 10px 80px 0 0;
+    text-align: start;
+}
+nav ul li a{
+    border-radius: 30px;
+    padding: 10px 13px;
+    font-size: 14px;
+    color: white;
+    float: right;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    transition: 0.3s;
+    color: white;
+    background: red;
+}
+
+/* ************************************* navbar ***************************************** */
+#navbarpa{
+    position: relative;
+}
+.navbar{
+    visibility: hidden;
+    position: fixed;
+    display: inline-block;
+    top: 150px;
+    right: 5px;
+    background: rgb(65, 64, 64);
+    border-radius: 10px;
+}
+.navbar.sticky{
+    visibility: visible;
+}
+.navbar li .item1{
+    margin-bottom: 50px;
+    color: white;
+}
+/********************************************************************************************/
+.banner{
+    margin-top: 15%;
+    overflow: hidden;
+}
+.banner h3{
+    margin: 1px 0 0 100px;
+    color: red;
+}
+.banner h1{
+    color: white;
+    margin: 1px 0 20px 100px;
+}
+.banner p{
+    max-width: 500px;
+    text-align: justify;
+    margin: 1px 0 0 100px;
+    color: white;
+}
+.banner button{
+    color: white;
+    background: red;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 15px 20px;
+    margin: 30px 0 0 100px;
+    border-radius: 3px;
+}
+.banner button:hover{
+    color: rgb(190, 189, 189);
+    background: rgb(252, 45, 45);
+}
+.banner button a{
+    text-decoration: none;
+    color: white;
+}
+.kepala{
+    display: flex;
+}
+.image{
+    margin: 170px 0 0 100px;
+}
+.image img{
+    width: 300px;
+    border-radius: 100%;
+}
+
+/* ******************* MENU PROFIL ******************* */
+
+#profil{
+    padding: 60px 100px 0;
+    height: 100%;
+}
+#profil .tentang_row h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 68px;
+    font-size: 30px;
+}
+#profil .tentang_col3{
+    text-align: center;
+    margin: 0 auto;
+}
+.container{
+    display: flex;
+    padding: 0 100px;
+}
+.tentang_col img,.tentang_col3 img{
+    width: 100px;
+    border-radius: 100%;
+}
+.container .tentang_col{
+    margin: 20px 20px;
+    flex-basis: 50%;
+}
+.tentang_col, .tentang_col3{
+    max-width: 500px;
+    
+}
+.tentang_col, .tentang_col3, img,p{
+    text-align: center;
+    color: white;
+}
+.tentang_col, .tentang_col3, img{
+    text-align: center;
+}
+.tentang_col h2, .tentang_col3 h2{
+    margin-bottom: 10px;
+}
+
+/* ******************* MENU PROJECT ******************* */
+
+
+#cardmom{
+    height: 100%;
+    padding: 60px 100px;
+}
+#cardmom h1{
+    color: white;
+    margin-bottom: 50px;
+}
+.cardpa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card1{
+    position: relative;
+    left: 0;
+    width: 320px;
+    height: 350px;
+    transition: 0.3s ease-out;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+}
+.card1 .imgbox{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.card1 .imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: block;
+    transition: 0.5s;
+}
+.card1 .content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    background: rgb(37, 36, 36);
+    transition: all 0.5s cubic-bezier(.48, -0.28, 0.41,1.4);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.card1:hover .content{
+    width: 100%;
+    height: 75%;
+    left: 0;
+    bottom: 0;
+}
+.content p{
+    margin: 39px 0 20px 0;
+    padding: 1em 1em;
+    transform: translateY(2em);
+    line-height: 1.3em;
+    text-align: justify;
+    opacity: 0;
+}
+.card1:hover .content p{
+    opacity: 1;
+    transform: translateY(0);
+}
+.content h2{
+    text-align: center;
+    color: white;
+    margin-top: 16px;
+}
+.content a{
+    color: blue;
+    text-decoration: none;
+    padding: 0 0 0 15px;
+}
+.card1:hover{
+    box-shadow: 0 0 3px white;
+}
+
+/* ******************* MENU KETERAMPILAN / SKILL ******************* */
+
+.ket{
+    height: 40%;
+    padding-top: 80px;
+}
+.keterampilan{
+    text-align: center;
+}
+.keterampilan h3{
+    color: white;
+    margin-bottom: 20px;
+}
+.skil{
+    display: flex;
+    margin-left: 25%;
+}
+#html, #css ,#js ,#py{
+    border-radius: 5px;
+}
+#html{
+    width: 72px;
+    padding: 10px;
+    background: white;
+    margin: 15px 20px;
+}
+#css{
+    padding: 10px;
+    background: white;
+    width: 65px;
+    margin: 15px 30px 0 20px;;
+}
+#vue{
+    padding: 10px;
+    background: white;
+    width: 65px;
+    height: 70px;
+    margin: 14px 10px 0 30px;
+    border-radius: 5px;
+}
+#js{
+    padding: 10px;
+    background: white;
+    width: 65px;
+    margin: 14px 10px 0 10px;
+}
+#py{
+    padding: 10px;
+    background: white;
+    width: 70px;
+    margin: 13px 0 0 30px;
+}
+#dj{
+    padding: 10px;
+    background: white;
+    width: 95px;
+    margin: 14px 30px 0 40px;
+    border-radius: 5px;
+}
+
+/* ******************* MENU CONTACT US ******************* */
+#email{
+    text-align: center;
+    padding: 0 100px;
+    height: 50%;
+}
+#email .isi{
+    background: rgb(37, 36, 36);
+    border-radius: 5px;
+    padding: 50px 0;
+}
+#email .isi h2{
+    color: white;
+    margin-bottom: 20px;
+}
+#email .isi .tombol{
+    outline: none;
+    cursor: pointer;
+    background: red;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 5px;
+}
+#email .isi .tombol a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+#email .isi .Github{
+    outline: none;
+    cursor: pointer;
+    background: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 5px;
+}
+#email .isi .Github a{
+    text-decoration: none;
+    color: white;
+}
+#email .isi .Github:hover{
+    background: rgb(17, 17, 17);
+}
+#email .isi .tombol:hover{
+    background: rgb(226, 22, 22);
+}
+
+/* ******************* FOOTER ******************* */
+
+.foot{
+    padding: 100px;
+    background: black;
+    display: flex;
+    align-items: center;
+}
+.copy{
+    border-top: 1px solid rgb(145, 141, 141);
+    padding: 10px;
+    background: black;
+}
+.copy p{
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+small{
+    color: white;
+}
+.social{
+    display: flex;
+    margin: 5px 38%;
+}
+.social a, i{
+    text-align: center;
+    width: 50px;
+    color: white;
+}
+
+
+
+/* *************** MEDIA QUERY *************** */
+
+@media (max-width: 1002px)
+{
+    header{
+        height: 100%;
+    }
+    .image img{
+        width: 200px;
+        border-radius: 100%;
+    }
+    .image{
+        margin: 170px 0 0 80px;
+    }
+}
+
+@media (max-width: 884px)
+{
+    header{
+        height: 100%;
+    }
+    .image img{
+        width: 200px;
+        border-radius: 100%;
+    }
+    .image{
+        margin: 170px 0 0 60px;
+    }
+    .banner{
+        height: 100%;
+    }
+    .banner h3{
+        font-size: 18px;
+        margin: 1px 0 0 70px;
+    }
+    .banner h1{
+        font-size: 30px;
+        margin: 1px 0 20px 70px;
+    }
+    .banner p {
+        max-width: 400px;
+        margin: 1px 0 0 70px;
+    }
+    .banner button{
+        padding: 10px 10px;
+        margin: 20px 0 100px 70px;
+    }
+    #profil {
+        padding: 60px 0px 0;
+    }
+    #profil .tentang_row h1 {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+    .tentang_col img, .tentang_col3 img {
+        width: 80px;
+        border-radius: 100%;
+    }
+    .tentang_col h2, .tentang_col3 h2 {
+        font-size: 20px;
+    }
+    .tentang_col p, .tentang_col3 p {
+        font-size: 15px;
+    }
+    .tentang_col, .tentang_col3 {
+        max-width: 300px;
+    }
+    #cardmom h1 {
+        font-size: 25px;
+    }
+    #cardmom {
+        padding: 60px 70px;
+    }
+    .card1 h2 {
+        font-size: 20px;
+    }
+    .card1 p {
+        font-size: 15px;
+    }
+    #email {
+        padding: 0 70px;
+    }
+    #email .isi {
+        padding: 30px 0;
+    }
+    #email .isi .tombol, #email .isi .Github{
+        padding: 10px;
+        font-size: 15px;
+    }
+    #email .isi .tombol a, #email .isi .Github a{
+        font-size: 10px;
+    }
+    .keterampilan h3 {
+        font-size: 15px;
+    }
+    #html {
+        width: 52px;
+        padding: 10px;
+        background: white;
+        margin: 15px 0px;
+    }
+    #css {
+        padding: 10px;
+        background: white;
+        width: 50px;
+        margin: 15px 10px 0 20px;
+    }
+    #js {
+        padding: 10px;
+        background: white;
+        width: 50px;
+        margin: 14px 0px 0 10px;
+    }
+    #py {
+        padding: 10px;
+        background: white;
+        width: 55px;
+        margin: 13px 0 0 20px;
+    }
+}
